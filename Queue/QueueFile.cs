@@ -18,7 +18,7 @@ public class QueueFile
     /// <summary>
     /// Creates a new <see cref="QueueFile"/> from defaults.
     /// </summary>
-    QueueFile()
+    public QueueFile()
     {
     }
 
@@ -26,7 +26,7 @@ public class QueueFile
     /// Creates a <see cref="QueueFile"/> from an existing file.
     /// </summary>
     /// <param name="filePath">The path to the file.</param>
-    QueueFile(string filePath)
+    public QueueFile(string filePath)
     {
         StreamReader sr = new StreamReader(File.OpenRead(filePath));
         Decode(Encoding.Unicode.GetBytes(sr.ReadToEnd()));
@@ -37,7 +37,7 @@ public class QueueFile
     /// Creates a <see cref="QueueFile"/> from an existing file.
     /// </summary>
     /// <param name="fileBytes">The file's byte-content.</param>
-    QueueFile(byte[] fileBytes)
+    public QueueFile(byte[] fileBytes)
     {
         Decode(fileBytes);
     }

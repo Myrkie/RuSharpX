@@ -158,7 +158,7 @@ public class RfQueueAdvancedParams
         this.DateParam2 = Int32.Parse(aParams[3]);
     }
 
-    internal string Encode()
+    public string Encode()
     {
         int useGlobalSkipList = Convert.ToInt32(this.UseGlobalSkipList);
         int enableSynchronization = Convert.ToInt32(this.EnableSynchronization);
